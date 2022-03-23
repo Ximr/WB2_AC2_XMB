@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dos Puntos</title>
+</head>
+<body>
+	<br>
+	<font face="Bookman Old Style, Leelawadee UI,  Agency FB", size="5">
+		<center><span style="font-size: 60px; line-height: normal;color: rgb(203, 236, 58);">Cálculo de la distancia entre dos puntos</span></center>
+	</font>
+	<br>
+	<form>
+		<table align="center">
+			<tr>
+				<td>X1:</td>
+				<td><input type="number" name="X1" id="X1"></td>
+				<td>Y1:</td>
+				<td><input type="number" name="Y1" id="Y1"></td>
+			</tr>
+			<tr>
+				<td>X2:</td>
+				<td><input type="number" name="X2" id="X2"></td>
+				<td>Y2:</td>
+				<td><input type="number" name="Y2" id="Y2"></td>
+			</tr>
+			<tr align="center">
+				<td colspan="4"><input type="button" value="Calcular" onclick="distancia()"></td>
+			</tr>
+			<tr align="center">
+				<td colspan="4" align="center"><input type="text" id="resultado" size="60" disabled></td>
+			</tr>
+		</table>
+	</form>
+	<script>
+		function distancia(){
+			var X1 = Number(document.getElementById("X1").value);
+			var Y1 = Number(document.getElementById("Y1").value);
+			var X2 = Number(document.getElementById("X2").value);
+			var Y2 = Number(document.getElementById("Y2").value);
+
+			var d = Math.sqrt((X2 - X1)*2 + (Y2 - Y1)*2);
+
+			document.getElementById("resultado").value = d.toFixed(2);
+		}		
+	</script>
+</body>
+</html>

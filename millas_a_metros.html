@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conversión de millas a metros</title>
+</head>
+<body>
+	<br>
+	<font face="Bookman Old Style, Leelawadee UI,  Agency FB", size="5">
+		<center>
+			<span style="font-size: 75px; line-height: normal;color: rgb(185, 122, 86);">Conversión de millas a metros</span>
+		</center>
+	</font>
+	<br>
+	<form>
+		<table align="center">
+			<tr>
+				<td>Millas:</td>
+				<td><input type="number" name="millas" id="millas"></td>
+			</tr>
+			<tr>
+				<td>Metros:</td>
+				<td><input type="number" name="metros" id="metros" disabled></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="Calcular" onclick="de_millas_metros()"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		var metros = document.querySelector("#metros");
+		function de_millas_metros() {
+			var millas = Number(document.getElementById("millas").value);
+			var millas_metros = millas * 1609.344;
+
+			metros.value = millas_metros;
+		}
+	</script>
+</body>
+</html>

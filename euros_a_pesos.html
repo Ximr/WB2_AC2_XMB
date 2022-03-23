@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>De Euros a Pesos Mexicanos</title>
+</head>
+<body>
+	<br>
+	<font face="Bookman Old Style, Leelawadee UI,  Agency FB", size="5">
+		<center>
+			<span style="font-size: 60px; line-height: normal;color: rgb(155, 80, 225);">Conversión de Euros a Pesos Mexicanos</span>
+		</center>
+	</font>
+	<br>
+	<form>
+		<table align="center">
+			<tr>
+				<td>Euros: </td>
+				<td><input type="number" name="euros" id="euros"></td>
+			</tr>
+			<tr>
+				<td>Pesos Mexicanos: </td>
+				<td><input type="number" name="pesos_mexicanos" id="pesos_mexicanos" disabled></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="Calcular" onclick="de_euros_pesos()"></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		function de_euros_pesos () {
+			var euros = Number(document.getElementById("euros").value);
+			var euro_pesos = euros*22.44;
+			document.getElementById("pesos_mexicanos").value = euro_pesos;
+		}
+	</script>
+</body>
+</html>

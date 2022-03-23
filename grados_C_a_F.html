@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conversión de grados °C a °F</title>
+</head>
+<body>
+	<br>
+	<font face="Bookman Old Style, Leelawadee UI,  Agency FB", size="5">
+		<center>
+			<span style="font-size: 75px; line-height: normal;color: rgb(255, 202, 24);">Conversión de grados °C a °F</span>
+		</center>
+	</font>
+	<br>
+	<form>
+		<table align="center">
+			<tr>
+				<td>Celsius:</td>
+				<td><input type="number" name="Celsius" id="Celsius"></td>
+			</tr>
+			<tr>
+				<td>Fahrenheit:</td>
+				<td><input type="number" name="Fahrenheit" id="Fahrenheit" disabled></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" value="Calcular" onclick="de_millas_metros()"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		var Fahrenheit = document.querySelector("#Fahrenheit");
+		function de_millas_metros() {
+			var Celsius = Number(document.getElementById("Celsius").value);
+			var Celsius_Fahrenheit = Celsius * 33.8;
+
+			Fahrenheit.value = Celsius_Fahrenheit;
+		}
+	</script>
+</body>
+</html>
